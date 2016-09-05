@@ -9,6 +9,23 @@ and to create new DOM elements to display it on the page.
 
 Here's some tools you can use to investigate what the data looks like.
 
+## Reddit Search API
+
+Reddit allows you to search their own content. Here's their own description of
+how the search endpoint of their API works.
+
+[Reddit Search API Documentation](https://www.reddit.com/dev/api/#GET_search)
+
+Here's how you can make a request to search their API for kittens:
+
+```js
+$.get('https://www.reddit.com/search.json', {
+  q: 'kittens'
+}).done(function(data) {
+  console.log(data);
+});
+```
+
 ## Pretty Print
 
 Although JSON is considerd a human-readable data format it can still be hard to read.
