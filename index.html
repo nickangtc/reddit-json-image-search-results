@@ -8,14 +8,23 @@
     <script src="main.js" type="text/javascript"></script>
   </head>
   <body>
-    <h1>Reddit AJAX Search</h1>
-
-    <form id="search-form">
-      <input id="query" placeholder="kittens">
-      <button type="submit">search reddit</button>
-    </form>
-
-    <!-- The div where results will be displayed. -->
-    <ol id="results"></ol>
+    <style>
+      .top-margin {
+        margin-top: 20px;
+      }
+    </style>
+    <div class="container text-center">
+      <div class="row">
+        <h1>Giphy AJAX Search</h1>
+        <form id="search-form">
+          <input id="query" placeholder="kittens">
+          <button type="submit">search reddit</button>
+        </form>
+      </div>
+      <div class="row">
+        <!-- The div where results will be displayed. -->
+        <div class="col-sm-8 col-sm-offset-2 text-center top-margin" id="results"></div>
+      </div>
+    </div>
   </body>
 </html>

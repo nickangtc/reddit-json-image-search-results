@@ -8,6 +8,7 @@ $(function () {
 
 function search (event) {
   clearResults();
+  $('#results').append('loading...');
 
   event.preventDefault();   // so the page doesn't refresh
   var query = $('#query').val();
@@ -20,13 +21,12 @@ function search (event) {
 
   $.get(url, params).done(function (results) {
     // create
-    var li = document.createElement('li');
     var img = document.createElement('img');
     // modify
     $(img).attr('src', results.data.image_url);
-    $(li).append(img);
     // append
-    $('#results').append(li);
+    clearResults();
+    $('#results').append(img);
   });
 }
 
